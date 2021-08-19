@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: radial-gradient(at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    min-height: 100vh;
+    background-size: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main h1 {
+    padding: 20px 0;
+    letter-spacing: 1px;
+    font-size: 42px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.todo-form {
+    padding-bottom: 20px;
+    display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+.input-box { 
+    display: flex;
+    padding: 10px 20px;
+    background-color: rgba(224, 222, 221, 0.3);
+    border: 1px solid transparent;
+    border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input{
+    background-color: rgba(224, 222, 221, 0);
+    border: 1px solid transparent;
+    border-radius: 5px;
 }
+
+input::placeholder {
+    color: #BDBDBD;
+}
+
+input[type="time"] {
+    width: fit-content;
+}
+
+.todo-data {
+    display: flex;    
+    width: 90%;
+}
+
+.todo-btn {
+    margin-left: 20px;
+    padding: 10px 20px;
+    background-color: green;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.task {
+    display: flex;
+    width: 530px;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    margin: 5px 0;
+    transition: 0.1s all;
+}
+
+.task:hover {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.delete-btn {
+    background-color: red;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.task-text {
+    margin: 0 10px;
+    width: 70%;
+    overflow-x: auto;
+}
+
+.task-text::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+}
+ 
+.task-text::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 100px;
+}
+ 
+.task-text::-webkit-scrollbar-thumb {
+    background-color: rgba(224, 222, 221, 0.3);
+    border-radius: 100px;
+}
+
